@@ -1,0 +1,44 @@
+## Regex Notes:
+
+Most basic way of pattern matching
+
+***re.findall(pattern, string, flags=0)*** returns a list of matched strings
+
+```
+e.g.
+text = ''' 
+Ha! let me see her: out, alas! he's cold: Her blood is settled, and her joints are stiff; Life and these lips have long been separated: Death lies on her like an untimely frost Upon the sweetest flower of all the field.
+'''
+re.findall('her', text)
+['her','her','her']
+```
+
+## Special regex characters (Occurence indicators)
+., +, *, ?, ^, $, (, ), [, ], {, }, |, \.
+
+```
+. -> ANY ONE character except newline. 
+
++ -> means 1 or more char
+
+* -> means 0 or more
+
+\n -> matches new line
+
+\t -> matches tab
+
+\s -> matches space
+
+\S -> negate of \s (matches everything that does not match \s)
+
+\w -> matches (a-zA-Z0-9_)
+
+\W -> negate of \w (matches every char that is not part of \w)
+
+\b -> TBD ?
+
+\d -> numeric digits (0-9)
+
+\D -> negate of \d, matches [^0-9]
+
+```
